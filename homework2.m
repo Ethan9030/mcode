@@ -16,13 +16,17 @@ end
 
 figure;
 
-subplot(1, 2, 1);
+subplot(1, 3, 1);
+imshow(img); 
+title('Grayscale Image');
+
+subplot(1, 3, 2);
 plot(0:255, histogram_manual);
 xlim([0 255]);
 xlabel('Gray Level');
 ylabel('Number of Pixels');
 title('Manual Histogram');
 
-subplot(1, 2, 2);
+subplot(1, 3, 3);
 imhist(img);
 title('Histogram Using imhist()');
